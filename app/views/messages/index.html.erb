@@ -14,11 +14,17 @@
 
 
 <%= form_for(Message.new) do |f| %>
+ 
+ <div>
  名前：
  <%= f.text_field :name %>
+ </div>
  
+ <div class="navbar-btn">
  内容：
- <%= f.text_field :body %>
+ <%= f.text_area :body, :size => "50x5", :class => "media-middle" %>
+ </div>
+
  <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
  
